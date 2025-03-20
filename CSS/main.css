@@ -1,0 +1,31 @@
+.logo {
+    width: 200px;
+    display: flex;
+    justify-content: left;
+    align-items: left;
+    align-content: left;
+
+}
+
+.icon {
+    /* storlek på ikonerna */
+    width: 1.5rem;
+    justify-content: right;
+}
+
+header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.search {
+    float: right;
+    font-size: 17px;
+}
+
+nav {
+    display: grid;
+    gap: 1px;
+}
