@@ -1,31 +1,208 @@
-.logo {
-    width: 200px;
-    display: flex;
-    justify-content: left;
-    align-items: left;
-    align-content: left;
-
+:root {
+    --gap: 1rem;
+    /* distans alla gap */
 }
 
-.icon {
-    /* storlek på ikonerna */
-    width: 1.5rem;
-    justify-content: right;
+* {
+    box-sizing: border-box;
+    font-family: 'Courier New', Courier, monospace;
+}
+
+body {
+
+    margin: 0;
 }
 
 header {
     display: flex;
-    justify-content: center;
+    flex-direction: column;
+    gap: var(--gap);
+    margin: 8px;
+}
+
+.container {
+    display: flex;
+    gap: var(--gap);
     align-items: center;
+}
+
+.container>input[type=search] {
+    flex-grow: 1;
+    border: 1px solid black;
+    border-radius: 10px;
+    padding: 5px;
+    font-size: 1rem;
+}
+
+main {
+    margin: 8px;
+    display: flex;
+    flex-direction: column;
+    gap: var(--gap);
+}
+
+.icon {
+    width: 2rem;
+}
+
+a {
+    text-decoration: none;
+    color: black;
+}
+
+ul {
+    list-style-type: none;
+    padding-inline-start: 0;
+    margin: 0;
+}
+
+h2 {
+    align-self: center;
+}
+
+.hero {
+    border: 1px solid black;
+    display: flex;
+    flex-direction: column;
+    gap: var(--gap);
+    align-items: center;
+    padding: var(--gap);
 
 }
 
-.search {
-    float: right;
-    font-size: 17px;
+img {
+    max-width: 100%;
 }
 
-nav {
-    display: grid;
+.products {
+    display: flex;
+    flex-direction: column;
+    gap: var(--gap);
+
+}
+
+.products>a {
+    text-decoration: none;
+}
+
+.products img {
+    border: 1px solid black;
+}
+
+.productDetails {
+    display: flex;
+    justify-content: space-between;
+}
+
+.shirtDetails {
+    display: flex;
+    flex-direction: column;
+    gap: var(--gap);
+
+}
+
+button {
+    padding: 10px 40px;
+    width: 500px;
+    align-self: center;
+    cursor: pointer;
+    transition-duration: 0.4s;
+}
+
+button:hover {
+    background-color: black;
+    color: white;
+}
+
+.checkoutItem {
+    border: 1px solid black;
+    display: flex;
+    flex-direction: column;
+    gap: var(--gap);
+    justify-content: space-between;
+    padding: var(--gap);
+}
+
+.checkoutItemTitle {
+    display: flex;
+    justify-content: space-between;
+}
+
+.checkoutItemContainer {
+    display: flex;
+    flex-direction: column;
     gap: 1px;
+}
+
+.topleft {
+    position: absolute;
+    top: var(--gap);
+    left: var(--gap);
+    background: black;
+    font-size: 1rem;
+    color: white;
+    margin: 1px;
+    border-radius: 10px;
+    padding: 10px 40px;
+}
+
+.productImage {
+    position: relative;
+}
+
+.productImage>.bottomright {
+    position: absolute;
+    bottom: var(--gap);
+    right: var(--gap);
+    width: 4rem;
+}
+
+.infoIcons>ul>li {
+    display: flex;
+    align-items: center;
+    gap: var(--gap);
+}
+
+details {
+    border: 1px solid black;
+    border-bottom: 0;
+}
+
+details:last-of-type {
+    border-bottom: 1px solid black;
+}
+
+details:open>summary {
+    background-color: lightblue;
+    border-bottom: 1px solid black;
+}
+
+summary {
+    padding: 5px;
+
+}
+
+summary::marker {
+    content: "";
+}
+
+details>ul {
+    padding-left: var(--gap);
+}
+
+footer>p {
+    text-align: center;
+}
+
+.customerDetails {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.address {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+
 }
