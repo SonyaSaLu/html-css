@@ -206,6 +206,10 @@ button:hover {
     display: none;
 }
 
+.checkout-table>thead>tr>th:not(:first-child) {
+    width: 150px;
+}
+
 .customer-details div {
     display: flex;
     flex-direction: column;
