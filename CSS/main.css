@@ -1,6 +1,5 @@
 :root {
     --gap: 1rem;
-    /* distans alla gap */
 }
 
 * {
@@ -12,13 +11,14 @@ body {
 
     margin: 0;
     background-color: white;
+    min-height: 100vh;
 }
 
 header {
     display: grid;
     grid-template-columns: 1fr;
     gap: var(--gap);
-    margin: 8px;
+    padding: var(--gap);
     background-color: white;
 
 }
@@ -393,6 +393,7 @@ footer>p {
     }
 
     /* här börjar karusellen */
+
     .product-section {
         margin: auto;
         display: block;
@@ -632,7 +633,7 @@ footer>p {
     .product-page {
         display: grid;
         grid-template-columns: 400px 500px;
-        /* är detta rätt? */
+        /* lösning för att texten inte ska bli för bred */
 
     }
 
