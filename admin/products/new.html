@@ -1,11 +1,48 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="sv">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <link rel="stylesheet" href="/CSS/admin-style.css">
+    <title>Administration</title>
 </head>
+
 <body>
-    
+    <header>
+        <h1>Administration</h1>
+    </header>
+    <nav>
+        <h3>Produkter</h3>
+    </nav>
+    <form class="input-content">
+
+        <h2>Produkter</h2>
+        <div class="product-input">
+            <label for="name">Namn</label>
+            <input type="text" name="name" id="name" maxlength="50" required>
+            <label for="description">Beskrivning</label>
+            <textarea name="description" id="description" cols="50" rows="10" placeholder="Ange beskrivning"></textarea>
+            <label for="file-img">Bild</label>
+            <input type="file" name="file-img" id="file-img" accept="image/*">
+            <label for="sku">SKU</label>
+            <input type="text" name="sku" id="sku" pattern="[A-Z]{3}[0-9]{3}" required>
+            <label for="price">Pris</label>
+            <input type="number" name="price" id="price">
+            <label for="publish-date">Publiceringsdatum</label>
+            <input type="date" name="publish-date" id="publish-date">
+        </div>
+
+        <fieldset class="category">
+            <legend>Kategorier</legend>
+            <label><input type="checkbox" name="backpack"> Ryggsäckar</label>
+            <label><input type="checkbox" name="gear"> Utrustning</label>
+            <label><input type="checkbox" name="women"> Kvinnor</label>
+            <label><input type="checkbox" name="men"> Män</label>
+        </fieldset>
+
+        <input type="submit" value="Lägg till">
+    </form>
 </body>
+
 </html>
