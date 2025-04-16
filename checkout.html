@@ -63,44 +63,43 @@
 
         <div class="checkoutItemContainer-lg">
             <table class="checkout-table">
-                <tr>
-                    <th>Produkt</th>
-                    <th>Antal</th>
-                    <th>Pris</th>
-                    <th>Totalt</th>
-                </tr>
-                <tr>
-                    <td>Ryggsäck</td>
-                    <td>1</td>
-                    <td>1999</td>
-                    <td>1999</td>
-                </tr>
-                <tr>
-                    <td>Gaskök</td>
-                    <td>2</td>
-                    <td>2400</td>
-                    <td>4800</td>
-                </tr>
+                <thead>
+                    <tr>
+                        <th>Produkt</th>
+                        <th width="150">Antal</th>
+                        <th width="150">Pris</th>
+                        <th width="150">Totalt</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Ryggsäck</td>
+                        <td>1</td>
+                        <td>1999 kr</td>
+                        <td>1999 kr</td>
+                    </tr>
+                    <tr>
+                        <td>Gaskök</td>
+                        <td>2</td>
+                        <td>2400 kr</td>
+                        <td>4800 kr</td>
+                    </tr>
+                </tbody>
             </table>
         </div>
         <form class="checkout-form">
             <h2>Kunduppgifter</h2>
-            <div class="customer-details">
-                <h1 hidden>kunduppgifter</h1>
-                <div>
-                    <label for="firstname">Förnamn</label>
-                    <input type="text" name="firstname" id="firstname">
-                </div>
-                <div>
-                    <label for="lastname">Efternamn</label>
-                    <input type="text" name="lastname" id="lastname">
-                </div>
-                <div>
-                    <label for="email">E-post</label>
-                    <input type="email" name="email" id="email">
-                </div>
-            </div>
 
+            <h1 hidden>kunduppgifter</h1>
+
+            <label for="firstname">Förnamn</label>
+            <input type="text" name="firstname" id="firstname">
+
+            <label for="lastname">Efternamn</label>
+            <input type="text" name="lastname" id="lastname">
+
+            <label for="email">E-post</label>
+            <input type="email" name="email" id="email">
 
 
             <fieldset class="address">
@@ -114,14 +113,11 @@
                 <input type="text" name="town" id="town">
             </fieldset>
 
-
             <div class="checkbox">
                 <input type="checkbox" name="checkbox" id="checkbox">
                 <label for="checkbox">Jag vill ta emot nyhetsbrev</label>
             </div>
-            <div class="buybutton">
-                <button>Köp</button>
-            </div>
+            <button class="buybutton">Köp</button>
         </form>
 
         <div class="infoIcons">

@@ -23,7 +23,6 @@ header {
 
 }
 
-
 .header-container {
     display: flex;
     gap: var(--gap);
@@ -70,7 +69,6 @@ h2 {
 }
 
 
-
 /* här börjar index.html */
 
 .hero-container {
@@ -100,6 +98,7 @@ img {
 .products {
     display: grid;
     grid-template-columns: 1fr;
+    gap: calc(2 * var(--gap));
 }
 
 
@@ -119,6 +118,10 @@ img {
 .product-text {
     display: flex;
     flex-direction: column;
+}
+
+.product-text h2 {
+    align-self: flex-start;
 }
 
 .productImage {
@@ -143,21 +146,11 @@ img {
     color: white;
 }
 
-/* .shirtDetails {
-    display: flex;
-    flex-direction: column;
-    gap: var(--gap);
-    text-align: start;
-
-} */
-
 /* Här börjar product-details.html */
 
 .product-text {
     gap: var(--gap);
 }
-
-
 
 button {
     padding: 10px 40px;
@@ -172,6 +165,11 @@ button {
 
 button:hover {
     background-color: #e9edc9;
+}
+
+.product-section {
+    display: none;
+    width: 100%;
 }
 
 /* Här börjar checkout.html */
@@ -197,7 +195,9 @@ button:hover {
 }
 
 .checkout-form {
-    padding: var(--gap)
+    display: flex;
+    flex-direction: column;
+    gap: var(--gap);
 }
 
 
@@ -213,13 +213,10 @@ button:hover {
 }
 
 .address {
-    margin-top: var(--gap);
-}
-
-.address {
     display: flex;
     flex-direction: column;
-    gap: 5px;
+    gap: var(--gap);
+    padding: var(--gap);
 }
 
 #zipcode {
@@ -233,14 +230,9 @@ button:hover {
 .buybutton {
     justify-self: center;
     margin: var(--gap);
-}
-
-.buybutton button {
     width: 200px;
     font-size: large;
 }
-
-
 
 
 .infoIcons>ul>li {
@@ -248,8 +240,6 @@ button:hover {
     align-items: center;
     gap: var(--gap);
 }
-
-
 
 
 /* Här börjar footer */
@@ -269,7 +259,6 @@ details:open>summary {
     background-color: #ccd5ae;
     border-bottom: 1px solid black;
 }
-
 
 summary {
     padding: 5px;
@@ -292,6 +281,7 @@ footer>p {
 
     text-align: center;
     padding: 20px;
+    margin: 0;
 
 }
 
@@ -302,17 +292,15 @@ footer>p {
 
 
 
-.product-section {
-    display: none;
-    width: 100%;
-}
-
-
-
 @media (width>=640px) {
     header {
         grid-template-columns: 300px auto;
 
+    }
+
+    .header-container>input[type=search] {
+        flex-grow: 0;
+        width: 230px;
     }
 
     header img {
@@ -413,6 +401,7 @@ footer>p {
         padding: 20px;
         max-width: 1500px;
     }
+
 
     .product-category {
         padding: 0 10px;
@@ -520,25 +509,23 @@ footer>p {
         border: 1px solid black;
         text-align: left;
         padding: 10px;
-        width: 40%;
     }
 
     .checkout-table th {
         background-color: #a3b18a;
     }
 
-    .checkout-table tr:nth-child(even) {
+    .checkout-table tr:nth-child(odd) {
         background-color: #ccd5ae;
     }
 
-    /* .checkoutItemContainer-lg {} */
 
     .checkoutItem {
         display: none;
     }
 
     .checkout-table {
-        display: block;
+        display: table;
         width: 100%;
     }
 
